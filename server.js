@@ -19,6 +19,8 @@ app.listen(port, function(){
 });
 
 //Hiking data//
+//TODO - create db
+
 //Format:
         //Hike Name
         //Location
@@ -36,12 +38,22 @@ var baldy = {hike: "Old Baldy Trail", location: "Mt. Wrightson, AZ", length: "",
 var clear = {hike: "West Clear Creak", location: "Camp Verde, AZ", length: "", comment: ""};
 
 //Hiking endpoints//
-app.get("/hunter", function(req, res){
-  res.json(hunter);
+app.get('/hunter', function(req, res){
+  console.log("get hunter");
+  res.send(hunter);
 });
 
-// app.get("/jug", ???);
+app.get('/jug', function(req, res){
+  console.log("get jug");
+  res.send(jug);
+});
 
-// app.get("/baldy", ???);
+app.get('/baldy', function(req, res){
+  console.log("get baldy");
+  res.send(baldy);
+});
 
-// app.get("/clear", ???);
+app.get('/clear', function(req, res){
+  console.log("get clear");
+  res.send(clear);
+});

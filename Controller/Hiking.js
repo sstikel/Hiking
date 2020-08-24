@@ -7,17 +7,18 @@
 
 //query server for data//
 function queryAPI(input){
-  //query API - Source: https://www.w3schools.com/xml/xml_http.asp
-  //TODO - link to API
+  //query API - Source: https://www.w3schools.com/xml/xml_http.asp 8/23/20
+
+  //TODO - connect with API
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        //return object
-       return this.response;
+       return JSON.parse(this.responseText); //source: https://restfulapi.net/json-with-ajax/
     }
   };
   //TODO - read up on requesting data from server
-  xhttp.open("GET", input, true);
+  xhttp.open("GET", "/" + input, true);
   xhttp.send();
 }
 
