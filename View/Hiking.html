@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hiking - Sam Gay</title>
+    <link rel="icon" type="image/gif/png" href="../sicon.png">
+    <script src="../Controller/Hiking.js"></script>
+  </head>
+  <body>
+    <h1>Hiking</h1>
+    <hr>
+    <!--Description-->
+    <p>
+      <h3>Description:</h3>
+      The purpose of this page is to display different hikes I have done in Arizona. <br>
+      Click on a trail below to see what I think about it.
+    </p>
+    
+    <!--List of links-->
+    <ul>
+      <li id="hunter" onclick="selectHike('hunter')"><a>Hunter Trail/Picacho Peak - Picacho, AZ</a></li>
+      <li id="jug" onclick="selectHike('jug')">Jug Trail #61 - Globe, AZ</li>
+      <li id="baldy" onclick="selectHike('baldy')">Old Baldy Trail/Mt. Wrightson - Continental, AZ</li>
+      <li id="clear" onclick="selectHike('clear')">West Clear Creek - Camp Verde, AZ</li>
+    </ul>
+    <br>
+
+    <!--Display Area-->
+    <h3>Hike Details:</h3>
+    <p id="display">Trail info will be displayed here.</p>
+
+  </body>
+</html>
+<!---->
